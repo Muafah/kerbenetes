@@ -1,0 +1,164 @@
+INTRODUCTION TO LINUX AND SCRIPTING: 
+====================================
+
+1. Linux is a free open-source operating system. It was first released by Linus Torvalds in 1991
+2. One of Linux's core components is the Linux kernel, which handles process control, 
+   networking, access to peripherals, and file system management.
+
+LINUX DISTRIBUTION:
+  Popular Distributions:
+
+Ubuntu: Known for its user-friendliness and active community.
+Fedora: Features cutting-edge software and innovations.
+Debian: Praised for its stability and reliability.
+Arch Linux: Aimed at experienced users who want to customize their OS.
+CentOS: Preferred in enterprise environments for its stability and long-term support.
+
+LINUX Architectiure:
+- Linux kernel: The core of the Linux system.
+- system libraries: Interface between the kernel and applications.
+- system Utilities: Programs that perform individual, specialized management tasks.
+- applications: Various software to perform work or provide services.  
+
+the windows filesystem:
+  C:\
+  C:\Users\forch
+  /= the root directory
+
+The Linux File system:
+The Linux filesystem is a hierarchical structure where all files and directories are located under the root directory
+denoted by "/". This structure allows for efficient file storage, management, and access. 
+
+Key directories include
+
+/                      # The root directory
+├── bin/               # Essential user command binaries
+├── etc/               # System configuration files
+├── home/              # This is where users are created
+│   ├── user1/
+│   └── usern/
+├── opt/               # Optional add-on applications
+├── lib/               # Essential shared libraries and kernel modules
+├── mnt/               # Temporary mount point
+├── dev/               # Device files
+├── var/
+│   ├── log/           # Log files
+│   └── mail/          # Mail server files
+├── proc/              # Process information pseudo-filesystem
+└── usr/
+    ├── bin/           # User binaries
+    ├── lib/           # Libraries for the binaries in /usr/bin/
+    ├── local/
+    │   ├── bin/       # Local binaries
+    │   └── lib/       # Local libraries
+    └── share/         # Architecture-independent data
+
+Linux Filesystem Hierarchy Explanation:
+
+/bin: - Essential User Binaries:
+The /bin directory contains essential user command binaries that are necessary for basic system operations. 
+These are commands that the system administrator and users use for troubleshooting, repairing, and system maintenance purposes.
+
+/etc - Configuration Files:
+/etc houses configuration files required by all programs. This includes system initialization scripts, 
+network configurations, and service configuration files. It is the go-to place for system-wide configuration.
+
+/home - User Home Directories:
+Each user on the system is assigned a specific directory under /home. This directory is intended for 
+storing personal files, configurations, and is the default working directory when a user logs in.
+
+/opt - Optional Add-on Applications:
+/opt is reserved for the installation of add-on application software packages. These are applications 
+that are not part of the default installation and usually come from third-party vendors.
+
+/tmp - Temporary Files:
+The /tmp directory is used to store temporary files used by applications and the system. Files in this 
+directory may be deleted without notice, such as on system reboot.
+
+/usr - User Binaries and Read-only Data:
+/usr is one of the largest directories on the system, containing user binaries, their documentation, l
+ibraries, header files, and static data. 
+The structure of /usr can be further divided into:
+
+/usr/bin - User commands and binary files.
+/usr/lib - Libraries for the binaries in /usr/bin.
+/usr/local - Tertiary hierarchy for local data, specific to the host.
+/usr/share - Architecture-independent (shared) data.
+/var - Variable Files
+/var contains variable data files. This includes spool directories and files, administrative and logging data, 
+and transient and temporary files.
+
+COMMANDS:
+  users interact with the linux OS using commands
+  windows has a cli and gui
+  these commands and performed on the command line interface (CLI) 
+
+
+
+to get into the Linux OS 
+this is to securely connect to the OS through ssh on port 22
+
+- You need an ssh client like:
+  - gitbash
+  - powershell
+  - commandprompt
+  - vscode  (integrated development envrironment)
+  - terminal
+  - PuTTY
+  - MobaExterm
+   
+- you need to create a server in AWS(Azure, Alibaba, Google-Cloud)/VMWare/WSL/VirtualBox/
+- get the private key
+- public ipv4 address
+- the username
+
+what is the ssh command?
+
+ssh -i key.pem ec2-user@18.212.221.136
+
+sublinetext
+
+1. File Manangement Commands:
+2. User Manangement Commands:
+3. process Manangement Commands:
+4. Package Manangement Commands:
+
+
+
+5. Navigation Manangement Commands:
+  =================================
+
+  these are command that help tyhe user to be able to navigate between directories, files, editor
+
+whwenever you connect to yoiur system there is a default user called ec2-user.
+there is another user which is the system user called the root user
+
+the root user has all the admin permissions
+the ec2-user has delegated admin permissions
+
+sudo echo "ec2-user  ALL=(ALL)    ALL" >> /etc/sudoers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
